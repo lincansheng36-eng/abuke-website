@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ABUKE automatic can sealer machines for PET can cups and aluminum cans. Commercial sealing equipment for beverage shops, cafes, juice bars, dessert shops, and food trucks." />
+  <title>ABUKE Automatic Can Sealer Machine</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f8;
+      --white: #ffffff;
+      --ink: #101318;
+      --ink-soft: #2a3039;
+      --muted: #656d78;
+      --muted-2: #8b929d;
+      --line: rgba(18, 24, 32, 0.12);
+      --line-strong: rgba(18, 24, 32, 0.18);
+      --steel: #d8dde3;
+      --steel-dark: #77818d;
+      --blue: #246bfe;
+      --blue-dark: #164fc2;
+      --radius-xl: 36px;
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --shadow-soft: 0 24px 70px rgba(17, 24, 39, 0.10);
+      --shadow-card: 0 18px 44px rgba(17, 24, 39, 0.08);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 50% -180px, rgba(198, 205, 214, 0.92), transparent 420px),
+        linear-gradient(180deg, #fff 0%, var(--bg) 34%, #fff 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+
+    .container { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+    .section { padding: 96px 0; }
+    .section-head { max-width: 780px; margin-bottom: 42px; }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 14px;
+      color: var(--blue-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .kicker::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 0 5px rgba(36, 107, 254, 0.11);
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 870px;
+      margin-bottom: 24px;
+      font-size: clamp(3.35rem, 8vw, 7.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.085em;
+      font-weight: 820;
+    }
+    h2 {
+      margin-bottom: 16px;
+      font-size: clamp(2.25rem, 4.5vw, 4.55rem);
+      line-height: 1;
+      letter-spacing: -0.065em;
+      font-weight: 800;
+    }
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.26rem;
+      line-height: 1.18;
+      letter-spacing: -0.035em;
+    }
+    .lead, .section-copy {
+      color: var(--muted);
+      font-size: clamp(1.06rem, 1.8vw, 1.28rem);
+      letter-spacing: -0.015em;
+    }
+    .section-copy { max-width: 680px; }
+
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 50;
+      border-bottom: 1px solid transparent;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(22px);
+      transition: border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+    }
+    .topbar.is-scrolled {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 16px 42px rgba(17, 24, 39, 0.07);
+    }
+    .nav {
+      width: min(calc(100% - 40px), var(--max));
+      height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 850;
+      letter-spacing: 0.17em;
+    }
+    .logo-mark {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      border-radius: 13px;
+      background: linear-gradient(140deg, #0f1319, #4e5865 55%, #d9dee4);
+      box-shadow: inset 0 1px 1px rgba(255,255,255,.35), 0 12px 28px rgba(17,24,39,.18);
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; color: #3f4651; font-size: .94rem; font-weight: 650; }
+    .nav-links a { transition: color .18s ease; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-pill {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      color: #fff;
+      border-radius: 999px;
+      background: var(--ink);
+      box-shadow: 0 14px 30px rgba(17,24,39,.16);
+    }
+    .menu-btn { display: none; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; background: rgba(255,255,255,.78); cursor: pointer; }
+    .menu-btn span { display: block; width: 18px; height: 2px; margin: 4px auto; border-radius: 999px; background: var(--ink); }
+
+    .hero { min-height: 100vh; padding: 142px 0 82px; display: grid; align-items: center; position: relative; overflow: hidden; }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 760px;
+      height: 760px;
+      right: -320px;
+      top: 90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(170, 180, 193, .55), transparent 68%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(330px, 510px);
+      gap: 58px;
+      align-items: center;
+    }
+    .hero .lead { max-width: 630px; margin-bottom: 34px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 25px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 760;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.primary { color: #fff; background: linear-gradient(135deg, #101318, #3a4350); box-shadow: 0 18px 36px rgba(17,24,39,.23); }
+    .btn.secondary { border-color: var(--line); background: rgba(255,255,255,.74); box-shadow: 0 16px 34px rgba(17,24,39,.08); }
+
+    .machine-panel {
+      position: relative;
+      min-height: 660px;
+      border: 1px solid rgba(255,255,255,.82);
+      border-radius: 44px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.96), rgba(229,233,238,.84)),
+        radial-gradient(circle at 28% 18%, #fff, transparent 38%);
+      box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,.92);
+      overflow: hidden;
+    }
+    .machine-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255,255,255,.4), transparent 35%, rgba(255,255,255,.24));
+      pointer-events: none;
+    }
+    .machine {
+      position: absolute;
+      inset: 50px 54px 42px;
+      display: grid;
+      place-items: center;
+      align-content: center;
+    }
+    .machine-head {
+      position: relative;
+      width: min(100%, 330px);
+      height: 108px;
+      border-radius: 30px 30px 18px 18px;
+      background: linear-gradient(145deg, #f7f9fb, #a3acb7 48%, #3e4652 100%);
+      box-shadow: inset 0 2px 2px rgba(255,255,255,.82), inset 0 -20px 38px rgba(17,24,39,.20), 0 23px 46px rgba(17,24,39,.17);
+    }
+    .panel-screen {
+      position: absolute;
+      top: 25px;
+      right: 26px;
+      width: 98px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #0b1017, #293344);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+    }
+    .panel-screen::before, .panel-screen::after { content: ""; position: absolute; left: 14px; height: 4px; border-radius: 999px; background: rgba(255,255,255,.78); }
+    .panel-screen::before { top: 14px; width: 52px; }
+    .panel-screen::after { top: 27px; width: 30px; opacity: .55; }
+    .machine-body {
+      width: min(100%, 300px);
+      height: 335px;
+      background: linear-gradient(90deg, #f9fbfd, #ccd3db 28%, #77818e 73%, #edf1f5);
+      border-radius: 22px;
+      box-shadow: inset 22px 0 32px rgba(255,255,255,.42), inset -28px 0 42px rgba(17,24,39,.16), 0 28px 54px rgba(17,24,39,.18);
+    }
+    .stage {
+      position: relative;
+      width: min(100%, 350px);
+      height: 120px;
+      margin-top: -18px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, #252d38, #070a0f);
+      box-shadow: inset 0 2px 2px rgba(255,255,255,.12), 0 30px 54px rgba(17,24,39,.29);
+    }
+    .cup {
+      position: absolute;
+      left: 50%;
+      bottom: 52px;
+      width: 116px;
+      height: 170px;
+      transform: translateX(-50%);
+      border-radius: 22px 22px 28px 28px;
+      background: linear-gradient(90deg, rgba(255,255,255,.84), rgba(229,234,240,.65) 32%, rgba(156,166,178,.72) 68%, rgba(255,255,255,.86));
+      box-shadow: inset 14px 0 20px rgba(255,255,255,.8), inset -14px 0 20px rgba(17,24,39,.11), 0 18px 28px rgba(17,24,39,.15);
+    }
+    .cup::before {
+      content: "55 mm";
+      position: absolute;
+      top: -11px;
+      left: 50%;
+      width: 102px;
+      height: 22px;
+      display: grid;
+      place-items: center;
+      transform: translateX(-50%);
+      color: #3e4652;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #fff, #cfd6de);
+      font-size: .68rem;
+      font-weight: 850;
+      letter-spacing: .05em;
+    }
+    .hero-note {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 27px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .note-item {
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,.76);
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 16px 34px rgba(17,24,39,.09);
+    }
+    .note-item strong { display: block; font-size: 1rem; letter-spacing: -.03em; }
+    .note-item span { color: var(--muted); font-size: .8rem; }
+
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.82);
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(18px);
+    }
+    .feature-card { min-height: 192px; padding: 26px; transition: transform .18s ease, box-shadow .18s ease; }
+    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 24px 58px rgba(17,24,39,.12); }
+    .icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 27px;
+      color: #fff;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #202832, #a6afb9);
+      box-shadow: inset 0 1px 1px rgba(255,255,255,.32), 0 12px 24px rgba(17,24,39,.14);
+      font-size: .85rem;
+      font-weight: 850;
+    }
+    .feature-card p, .model-card p, .app-card p, .faq-panel p { color: var(--muted); margin-bottom: 0; }
+
+    .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .model-card { min-height: 390px; padding: 30px; position: relative; overflow: hidden; }
+    .model-card.featured {
+      color: #fff;
+      border-color: rgba(255,255,255,.18);
+      background: radial-gradient(circle at 28% 0%, rgba(255,255,255,.24), transparent 38%), linear-gradient(145deg, #101318, #3b4553 56%, #929ca8 140%);
+      box-shadow: 0 34px 82px rgba(17,24,39,.24);
+    }
+    .model-card.featured p, .model-card.featured li { color: rgba(255,255,255,.75); }
+    .badge {
+      display: inline-flex;
+      margin-bottom: 20px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(36,107,254,.10);
+      color: var(--blue-dark);
+      font-size: .75rem;
+      font-weight: 850;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .featured .badge { color: #fff; background: rgba(255,255,255,.16); }
+    .model-card ul { display: grid; gap: 12px; margin: 26px 0 0; padding: 0; list-style: none; }
+    .model-card li { position: relative; padding-left: 24px; color: #4f5864; }
+    .model-card li::before { content: ""; position: absolute; left: 0; top: .66em; width: 9px; height: 9px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 5px rgba(36,107,254,.10); }
+    .featured li::before { background: #fff; box-shadow: 0 0 0 5px rgba(255,255,255,.13); }
+
+    .applications { display: grid; grid-template-columns: .86fr 1.14fr; gap: 28px; align-items: stretch; }
+    .dark-panel {
+      padding: 38px;
+      color: #fff;
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at 85% 8%, rgba(255,255,255,.22), transparent 34%), linear-gradient(145deg, #101318, #404a58);
+      box-shadow: 0 30px 72px rgba(17,24,39,.20);
+    }
+    .dark-panel .kicker { color: #dfe7f2; }
+    .dark-panel p { color: rgba(255,255,255,.72); margin-bottom: 0; }
+    .app-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .app-card { padding: 24px; }
+    .app-card span { width: 38px; height: 38px; display: grid; place-items: center; margin-bottom: 20px; border-radius: 13px; background: #eef1f4; font-weight: 850; }
+
+    .spec-panel { padding: 34px; border: 1px solid var(--line); border-radius: var(--radius-xl); background: rgba(255,255,255,.84); box-shadow: var(--shadow-soft); }
+    .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 0; }
+    .spec-card { padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(246,247,249,.9)); }
+    .spec-card dt { color: var(--muted); font-size: .88rem; font-weight: 700; }
+    .spec-card dd { margin: 8px 0 0; color: var(--ink); font-size: 1.34rem; line-height: 1.15; letter-spacing: -.04em; font-weight: 820; }
+
+    .faq-wrap { max-width: 900px; margin: 0 auto; }
+    .faq-wrap .section-head { margin-inline: auto; text-align: center; }
+    .faq-list { display: grid; gap: 12px; }
+    .faq-item { overflow: hidden; }
+    .faq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 22px 24px;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+      text-align: left;
+      font-weight: 800;
+    }
+    .faq-trigger i { width: 28px; height: 28px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 50%; background: #eef1f4; font-style: normal; transition: transform .2s ease; }
+    .faq-panel { max-height: 0; overflow: hidden; transition: max-height .25s ease; }
+    .faq-panel p { padding: 0 24px 24px; }
+    .faq-item.open .faq-trigger i { transform: rotate(45deg); }
+
+    .quote { padding-top: 36px; }
+    .quote-card {
+      padding: clamp(38px, 7vw, 76px);
+      border-radius: 44px;
+      color: #fff;
+      background: radial-gradient(circle at 82% 10%, rgba(255,255,255,.23), transparent 30%), linear-gradient(135deg, #0d1117, #252e3a 54%, #8b96a3 150%);
+      box-shadow: 0 34px 90px rgba(17,24,39,.27);
+      overflow: hidden;
+    }
+    .quote-card p { max-width: 650px; color: rgba(255,255,255,.72); }
+    .quote-card .kicker { color: #dfe7f2; }
+    .quote-card .primary { color: var(--ink); background: #fff; }
+    .quote-card .secondary { color: #fff; border-color: rgba(255,255,255,.24); background: rgba(255,255,255,.10); }
+
+    footer { padding: 34px 0 46px; color: var(--muted); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; padding-top: 26px; border-top: 1px solid var(--line); font-size: .94rem; }
+    .footer-inner p { margin: 0; }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        position: fixed;
+        top: 72px;
+        left: 20px;
+        right: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: rgba(255,255,255,.96);
+        box-shadow: 0 24px 64px rgba(17,24,39,.16);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 13px 14px; }
+      .nav-pill { margin-top: 8px; }
+      .menu-btn { display: block; }
+      .hero-grid, .applications { grid-template-columns: 1fr; }
+      .machine-panel { min-height: 550px; }
+      .feature-grid, .model-grid, .spec-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 680px) {
+      .container, .nav { width: min(calc(100% - 28px), var(--max)); }
+      .logo { letter-spacing: .1em; }
+      .hero { padding: 112px 0 64px; }
+      h1 { font-size: clamp(3rem, 16vw, 4.65rem); }
+      .actions, .footer-inner { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; }
+      .section { padding: 68px 0; }
+      .machine-panel { min-height: 500px; border-radius: 30px; }
+      .machine { inset: 32px 26px 34px; }
+      .machine-head { height: 90px; }
+      .panel-screen { top: 20px; right: 18px; width: 82px; height: 42px; }
+      .machine-body { height: 268px; }
+      .stage { height: 105px; }
+      .cup { width: 96px; height: 144px; }
+      .hero-note { grid-template-columns: 1fr; left: 18px; right: 18px; }
+      .feature-grid, .model-grid, .app-grid, .spec-grid { grid-template-columns: 1fr; }
+      .spec-panel { padding: 18px; border-radius: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="logo" href="#top" aria-label="ABUKE homepage">
+        <span class="logo-mark">A</span>
+        <span>ABUKE</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#models">Models</a>
+        <a href="#applications">Applications</a>
+        <a href="#specs">Specifications</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-pill" href="#quote">Contact Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="kicker">Commercial Can Sealer Machine</p>
+          <h1>ABUKE Automatic Can Sealer Machine</h1>
+          <p class="lead">Seal PET cans and aluminum cans with reliable commercial performance.</p>
+          <div class="actions">
+            <a class="btn primary" href="#models">Shop Now</a>
+            <a class="btn secondary" href="#quote">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="machine-panel" aria-label="ABUKE automatic can sealer machine illustration">
+          <div class="machine" aria-hidden="true">
+            <div class="machine-head"><div class="panel-screen"></div></div>
+            <div class="machine-body"></div>
+            <div class="stage"><div class="cup"></div></div>
+          </div>
+          <div class="hero-note" aria-label="Key specifications">
+            <div class="note-item"><strong>110V</strong><span>US power setup</span></div>
+            <div class="note-item"><strong>140W</strong><span>Commercial use</span></div>
+            <div class="note-item"><strong>55 mm</strong><span>Compatible opening</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Core selling points</p>
+          <h2>Built for clean, consistent beverage sealing.</h2>
+          <p class="section-copy">ABUKE supports practical shop workflows with straightforward operation, commercial-focused sealing, and cup compatibility for can-style drinks.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature-card"><div class="icon">01</div><h3>Automatic one-touch operation</h3><p>Start the sealing cycle with a simple operating flow for busy service counters.</p></article>
+          <article class="card feature-card"><div class="icon">02</div><h3>No cup pad required for flagship model</h3><p>The flagship configuration reduces cup pad handling for faster mixed-cup workflows.</p></article>
+          <article class="card feature-card"><div class="icon">03</div><h3>Automatically adapts to cup height</h3><p>Auto height detection on the flagship model helps simplify setup between compatible cup sizes.</p></article>
+          <article class="card feature-card"><div class="icon">04</div><h3>Compatible with 55mm can openings</h3><p>Designed for PET can cups and aluminum cans with a 55 mm / 2.17 in opening.</p></article>
+          <article class="card feature-card"><div class="icon">05</div><h3>Suitable for cups under 21cm height</h3><p>Supports can-style cups up to 21 cm / 8.27 in for common beverage packaging needs.</p></article>
+          <article class="card feature-card"><div class="icon">06</div><h3>Stable sealing, less leakage risk</h3><p>A commercial sealing structure helps reduce avoidable spills during service and delivery.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="models">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Three model options</p>
+          <h2>Choose the machine that matches your counter.</h2>
+          <p class="section-copy">Compare motor configuration, cup pad requirements, and interface options before selecting an ABUKE can sealing machine.</p>
+        </div>
+        <div class="model-grid">
+          <article class="card model-card">
+            <span class="badge">Regular Model</span>
+            <h3>Essential automatic sealing</h3>
+            <p>For shops that need a straightforward sealing process with cup pads.</p>
+            <ul><li>Small motor</li><li>Requires cup pads</li><li>Practical daily beverage sealing</li></ul>
+          </article>
+          <article class="card model-card">
+            <span class="badge">Upgraded Model</span>
+            <h3>Stronger sealing performance</h3>
+            <p>For teams that prefer a larger motor while keeping a familiar cup pad workflow.</p>
+            <ul><li>Large motor</li><li>Stronger sealing performance</li><li>Requires cup pads</li></ul>
+          </article>
+          <article class="card model-card featured">
+            <span class="badge">Flagship Model</span>
+            <h3>Dual motor with touchscreen panel</h3>
+            <p>For counters that want automated height detection and no cup pad requirement.</p>
+            <ul><li>Dual motor</li><li>Touchscreen panel</li><li>No cup pads required</li><li>Auto height detection</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="applications">
+      <div class="container applications">
+        <div class="dark-panel">
+          <p class="kicker">Applications</p>
+          <h2>Made for modern beverage retail.</h2>
+          <p>Use ABUKE to add can-style drink packaging to commercial menus across stationary stores and mobile beverage concepts.</p>
+        </div>
+        <div class="app-grid">
+          <article class="card app-card"><span>01</span><h3>Bubble tea shops</h3><p>Package milk tea, fruit tea, and specialty drinks for takeaway service.</p></article>
+          <article class="card app-card"><span>02</span><h3>Coffee shops</h3><p>Seal cold brew, iced lattes, and seasonal beverages in can-style cups.</p></article>
+          <article class="card app-card"><span>03</span><h3>Juice bars</h3><p>Support fresh juice and smoothie packaging with a clean retail look.</p></article>
+          <article class="card app-card"><span>04</span><h3>Dessert shops</h3><p>Add branded beverage packaging alongside desserts and snacks.</p></article>
+          <article class="card app-card"><span>05</span><h3>Food trucks</h3><p>Use a compact commercial workflow for mobile drink service.</p></article>
+          <article class="card app-card"><span>06</span><h3>Commercial beverage stores</h3><p>Standardize beverage sealing for daily retail operations.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="specs">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Product parameters</p>
+          <h2>Key specifications for planning your setup.</h2>
+          <p class="section-copy">Confirm power, footprint, weight, opening size, and cup height compatibility before ordering.</p>
+        </div>
+        <div class="spec-panel">
+          <dl class="spec-grid">
+            <div class="spec-card"><dt>Voltage</dt><dd>110V</dd></div>
+            <div class="spec-card"><dt>Power</dt><dd>140W</dd></div>
+            <div class="spec-card"><dt>Machine Size</dt><dd>200 × 400 × 600 mm</dd></div>
+            <div class="spec-card"><dt>Machine Weight</dt><dd>32 kg</dd></div>
+            <div class="spec-card"><dt>Compatible Opening</dt><dd>55 mm / 2.17 in</dd></div>
+            <div class="spec-card"><dt>Max Cup Height</dt><dd>21 cm / 8.27 in</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <div class="section-head">
+          <p class="kicker">FAQ</p>
+          <h2>Questions before ordering.</h2>
+          <p class="section-copy">Review cup compatibility, cup pad requirements, and commercial-use fit.</p>
+        </div>
+        <div class="faq-list">
+          <article class="card faq-item open"><button class="faq-trigger" type="button" aria-expanded="true"><span>What cups does it work with?</span><i aria-hidden="true">+</i></button><div class="faq-panel"><p>ABUKE can sealers are designed for can-style cups with a 55 mm / 2.17 in compatible opening and cup height under 21 cm / 8.27 in.</p></div></article>
+          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false"><span>Does it require cup pads?</span><i aria-hidden="true">+</i></button><div class="faq-panel"><p>The Regular Model and Upgraded Model require cup pads. The Flagship Model does not require cup pads and includes auto height detection.</p></div></article>
+          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false"><span>Can it seal PET can cups?</span><i aria-hidden="true">+</i></button><div class="faq-panel"><p>Yes. It can be used with PET can cups and aluminum cans that match the listed opening and height specifications.</p></div></article>
+          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false"><span>Is it suitable for commercial use?</span><i aria-hidden="true">+</i></button><div class="faq-panel"><p>Yes. ABUKE automatic can sealing machines are designed for commercial beverage environments including cafes, bubble tea shops, juice bars, dessert shops, food trucks, and beverage stores.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quote" id="quote">
+      <div class="container">
+        <div class="quote-card">
+          <p class="kicker">Contact ABUKE</p>
+          <h2>Ready to add automatic can sealing to your beverage line?</h2>
+          <p>Share your cup material, opening size, daily sealing volume, and preferred model so compatibility can be checked before purchase.</p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:info@abuke.com?subject=ABUKE%20Automatic%20Can%20Sealer%20Inquiry">Contact Us</a>
+            <a class="btn secondary" href="#models">Compare Models</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ABUKE. Commercial Can Sealer Machine.</p>
+      <p>Automatic Can Sealing Machine for PET cans and aluminum cans.</p>
+    </div>
+  </footer>
+
+  <script>
+    const topbar = document.getElementById('topbar');
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const year = document.getElementById('year');
+
+    year.textContent = new Date().getFullYear();
+
+    const setHeaderState = () => {
+      topbar.classList.toggle('is-scrolled', window.scrollY > 12);
+    };
+
+    setHeaderState();
+    window.addEventListener('scroll', setHeaderState, { passive: true });
+
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.querySelectorAll('.faq-item').forEach((item) => {
+      const trigger = item.querySelector('.faq-trigger');
+      const panel = item.querySelector('.faq-panel');
+
+      const syncPanel = () => {
+        panel.style.maxHeight = item.classList.contains('open') ? `${panel.scrollHeight}px` : '0px';
+      };
+
+      syncPanel();
+
+      trigger.addEventListener('click', () => {
+        const open = item.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', String(open));
+        syncPanel();
+      });
+
+      window.addEventListener('resize', syncPanel);
+    });
+  </script>
+</body>
+</html>
