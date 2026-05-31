@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ABUKE Automatic Can Sealer Machine for PET can cups and aluminum cans. Commercial can sealing equipment for beverage shops, cafes, juice bars, dessert shops, food trucks, and beverage stores." />
+  <meta name="description" content="ABUKE Automatic Can Sealer Machine for PET can cups and aluminum cans. Commercial can sealing equipment for bubble tea shops, coffee shops, juice bars, dessert shops, food trucks, and beverage stores." />
   <title>ABUKE Automatic Can Sealer Machine</title>
   <style>
     :root {
-      --bg: #f6f7f9;
-      --white: #fff;
+      --page: #f6f7f9;
+      --white: #ffffff;
       --ink: #101318;
-      --text: #2e3540;
+      --text: #303843;
       --muted: #68727f;
       --line: rgba(16, 19, 24, 0.12);
       --blue: #1f67ff;
       --blue-dark: #164abd;
-      --steel: #d8dee6;
-      --steel-dark: #6f7b88;
+      --steel: #d9dfe7;
+      --steel-dark: #707b88;
       --radius-xl: 36px;
       --radius-lg: 26px;
       --radius-md: 18px;
@@ -32,13 +32,26 @@
       color: var(--ink);
       background:
         radial-gradient(circle at 50% -230px, rgba(201, 209, 219, 0.95), transparent 520px),
-        linear-gradient(180deg, #fff 0%, var(--bg) 38%, #fff 100%);
+        linear-gradient(180deg, #ffffff 0%, var(--page) 38%, #ffffff 100%);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.55;
       overflow-x: hidden;
     }
     a { color: inherit; text-decoration: none; }
     button { font: inherit; }
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: 16px;
+      z-index: 99;
+      padding: 10px 14px;
+      color: #ffffff;
+      background: var(--ink);
+      border-radius: 999px;
+      transform: translateY(-140%);
+      transition: transform 0.2s ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
 
     .container { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
     .section { padding: 94px 0; }
@@ -67,14 +80,14 @@
     h1 {
       max-width: 900px;
       margin-bottom: 24px;
-      font-size: clamp(3.25rem, 8vw, 7.25rem);
+      font-size: clamp(3.2rem, 8vw, 7.2rem);
       line-height: 0.93;
       letter-spacing: -0.085em;
       font-weight: 820;
     }
     h2 {
       margin-bottom: 16px;
-      font-size: clamp(2.2rem, 4.4vw, 4.45rem);
+      font-size: clamp(2.18rem, 4.4vw, 4.4rem);
       line-height: 1;
       letter-spacing: -0.065em;
       font-weight: 810;
@@ -127,7 +140,7 @@
       height: 39px;
       display: grid;
       place-items: center;
-      color: #fff;
+      color: #ffffff;
       border-radius: 13px;
       background: linear-gradient(140deg, #0f1319, #4f5966 55%, #d8dee5);
       box-shadow: inset 0 1px 1px rgba(255,255,255,.35), 0 12px 28px rgba(16,24,40,.18);
@@ -141,7 +154,7 @@
       align-items: center;
       justify-content: center;
       padding: 0 18px;
-      color: #fff;
+      color: #ffffff;
       border-radius: 999px;
       background: var(--ink);
       box-shadow: 0 14px 30px rgba(16,24,40,.16);
@@ -176,7 +189,7 @@
       transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
     }
     .button:hover { transform: translateY(-2px); }
-    .button.primary { color: #fff; background: linear-gradient(135deg, #101318, #3a4350); box-shadow: 0 18px 36px rgba(16,24,40,.23); }
+    .button.primary { color: #ffffff; background: linear-gradient(135deg, #101318, #3a4350); box-shadow: 0 18px 36px rgba(16,24,40,.23); }
     .button.secondary { border-color: var(--line); background: rgba(255,255,255,.76); box-shadow: 0 16px 34px rgba(16,24,40,.08); }
 
     .machine-card {
@@ -184,7 +197,7 @@
       min-height: 660px;
       border: 1px solid rgba(255,255,255,.82);
       border-radius: 44px;
-      background: linear-gradient(145deg, rgba(255,255,255,.96), rgba(229,233,238,.84)), radial-gradient(circle at 28% 18%, #fff, transparent 38%);
+      background: linear-gradient(145deg, rgba(255,255,255,.96), rgba(229,233,238,.84)), radial-gradient(circle at 28% 18%, #ffffff, transparent 38%);
       box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,.92);
       overflow: hidden;
     }
@@ -205,7 +218,7 @@
     .machine-body { width: min(100%, 300px); height: 335px; border-radius: 22px; background: linear-gradient(90deg, #f9fbfd, #ccd3db 28%, #77818e 73%, #edf1f5); box-shadow: inset 22px 0 32px rgba(255,255,255,.42), inset -28px 0 42px rgba(16,24,40,.16), 0 28px 54px rgba(16,24,40,.18); }
     .machine-stage { position: relative; width: min(100%, 350px); height: 120px; margin-top: -18px; border-radius: 28px; background: linear-gradient(145deg, #252d38, #070a0f); box-shadow: inset 0 2px 2px rgba(255,255,255,.12), 0 30px 54px rgba(16,24,40,.29); }
     .can-cup { position: absolute; left: 50%; bottom: 52px; width: 116px; height: 170px; transform: translateX(-50%); border-radius: 22px 22px 28px 28px; background: linear-gradient(90deg, rgba(255,255,255,.84), rgba(229,234,240,.65) 32%, rgba(156,166,178,.72) 68%, rgba(255,255,255,.86)); box-shadow: inset 14px 0 20px rgba(255,255,255,.8), inset -14px 0 20px rgba(16,24,40,.11), 0 18px 28px rgba(16,24,40,.15); }
-    .can-cup::before { content: "55 mm"; position: absolute; top: -11px; left: 50%; width: 102px; height: 22px; display: grid; place-items: center; transform: translateX(-50%); color: #3e4652; border-radius: 50%; background: linear-gradient(180deg, #fff, #cfd6de); font-size: .68rem; font-weight: 850; letter-spacing: .05em; }
+    .can-cup::before { content: "55 mm"; position: absolute; top: -11px; left: 50%; width: 102px; height: 22px; display: grid; place-items: center; transform: translateX(-50%); color: #3e4652; border-radius: 50%; background: linear-gradient(180deg, #ffffff, #cfd6de); font-size: .68rem; font-weight: 850; letter-spacing: .05em; }
     .hero-specs { position: absolute; right: 28px; bottom: 27px; left: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .hero-spec { padding: 14px; border: 1px solid rgba(255,255,255,.76); border-radius: 18px; background: rgba(255,255,255,.72); backdrop-filter: blur(16px); box-shadow: 0 16px 34px rgba(16,24,40,.09); }
     .hero-spec strong { display: block; font-size: 1rem; letter-spacing: -.03em; }
@@ -215,22 +228,22 @@
     .card { border: 1px solid var(--line); border-radius: var(--radius-lg); background: rgba(255,255,255,.84); box-shadow: var(--shadow-card); backdrop-filter: blur(18px); }
     .feature-card { min-height: 198px; padding: 26px; transition: transform .18s ease, box-shadow .18s ease; }
     .feature-card:hover { transform: translateY(-5px); box-shadow: 0 24px 58px rgba(16,24,40,.12); }
-    .number-icon { width: 43px; height: 43px; display: grid; place-items: center; margin-bottom: 27px; color: #fff; border-radius: 14px; background: linear-gradient(145deg, #202832, #a6afb9); box-shadow: inset 0 1px 1px rgba(255,255,255,.32), 0 12px 24px rgba(16,24,40,.14); font-size: .85rem; font-weight: 850; }
+    .number-icon { width: 43px; height: 43px; display: grid; place-items: center; margin-bottom: 27px; color: #ffffff; border-radius: 14px; background: linear-gradient(145deg, #202832, #a6afb9); box-shadow: inset 0 1px 1px rgba(255,255,255,.32), 0 12px 24px rgba(16,24,40,.14); font-size: .85rem; font-weight: 850; }
     .feature-card p, .model-card p, .app-card p, .faq-panel p { color: var(--muted); margin-bottom: 0; }
 
     .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .model-card { min-height: 396px; padding: 30px; position: relative; overflow: hidden; }
-    .model-card.featured { color: #fff; border-color: rgba(255,255,255,.18); background: radial-gradient(circle at 28% 0%, rgba(255,255,255,.24), transparent 38%), linear-gradient(145deg, #101318, #3b4553 56%, #929ca8 140%); box-shadow: 0 34px 82px rgba(16,24,40,.24); }
+    .model-card.featured { color: #ffffff; border-color: rgba(255,255,255,.18); background: radial-gradient(circle at 28% 0%, rgba(255,255,255,.24), transparent 38%), linear-gradient(145deg, #101318, #3b4553 56%, #929ca8 140%); box-shadow: 0 34px 82px rgba(16,24,40,.24); }
     .model-card.featured p, .model-card.featured li { color: rgba(255,255,255,.76); }
     .badge { display: inline-flex; margin-bottom: 20px; padding: 7px 12px; border-radius: 999px; background: rgba(31,103,255,.1); color: var(--blue-dark); font-size: .75rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
-    .featured .badge { color: #fff; background: rgba(255,255,255,.16); }
+    .featured .badge { color: #ffffff; background: rgba(255,255,255,.16); }
     .model-card ul { display: grid; gap: 12px; margin: 26px 0 0; padding: 0; list-style: none; }
     .model-card li { position: relative; padding-left: 24px; color: #4f5864; }
     .model-card li::before { content: ""; position: absolute; left: 0; top: .66em; width: 9px; height: 9px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 5px rgba(31,103,255,.1); }
-    .featured li::before { background: #fff; box-shadow: 0 0 0 5px rgba(255,255,255,.13); }
+    .featured li::before { background: #ffffff; box-shadow: 0 0 0 5px rgba(255,255,255,.13); }
 
     .applications-layout { display: grid; grid-template-columns: .86fr 1.14fr; gap: 28px; align-items: stretch; }
-    .dark-panel { padding: 38px; color: #fff; border-radius: var(--radius-xl); background: radial-gradient(circle at 85% 8%, rgba(255,255,255,.22), transparent 34%), linear-gradient(145deg, #101318, #404a58); box-shadow: 0 30px 72px rgba(16,24,40,.2); }
+    .dark-panel { padding: 38px; color: #ffffff; border-radius: var(--radius-xl); background: radial-gradient(circle at 85% 8%, rgba(255,255,255,.22), transparent 34%), linear-gradient(145deg, #101318, #404a58); box-shadow: 0 30px 72px rgba(16,24,40,.2); }
     .dark-panel .eyebrow { color: #dfe7f2; }
     .dark-panel p { color: rgba(255,255,255,.72); margin-bottom: 0; }
     .app-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -253,11 +266,11 @@
     .faq-item.open .faq-trigger i { transform: rotate(45deg); }
 
     .cta-section { padding-top: 36px; }
-    .cta-card { padding: clamp(38px, 7vw, 76px); color: #fff; border-radius: 44px; background: radial-gradient(circle at 82% 10%, rgba(255,255,255,.23), transparent 30%), linear-gradient(135deg, #0d1117, #252e3a 54%, #8b96a3 150%); box-shadow: 0 34px 90px rgba(16,24,40,.27); overflow: hidden; }
+    .cta-card { padding: clamp(38px, 7vw, 76px); color: #ffffff; border-radius: 44px; background: radial-gradient(circle at 82% 10%, rgba(255,255,255,.23), transparent 30%), linear-gradient(135deg, #0d1117, #252e3a 54%, #8b96a3 150%); box-shadow: 0 34px 90px rgba(16,24,40,.27); overflow: hidden; }
     .cta-card p { max-width: 650px; color: rgba(255,255,255,.72); }
     .cta-card .eyebrow { color: #dfe7f2; }
-    .cta-card .primary { color: var(--ink); background: #fff; }
-    .cta-card .secondary { color: #fff; border-color: rgba(255,255,255,.24); background: rgba(255,255,255,.1); }
+    .cta-card .primary { color: var(--ink); background: #ffffff; }
+    .cta-card .secondary { color: #ffffff; border-color: rgba(255,255,255,.24); background: rgba(255,255,255,.1); }
     footer { padding: 34px 0 46px; color: var(--muted); }
     .footer-inner { display: flex; justify-content: space-between; gap: 18px; padding-top: 26px; border-top: 1px solid var(--line); font-size: .94rem; }
     .footer-inner p { margin: 0; }
@@ -295,6 +308,8 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header" id="siteHeader">
     <nav class="nav" aria-label="Primary navigation">
       <a class="logo" href="#top" aria-label="ABUKE homepage">
@@ -313,8 +328,8 @@
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Commercial Can Sealer Machine</p>
@@ -367,35 +382,16 @@
           <p class="section-copy">Compare motor configuration, cup pad requirements, and interface options before selecting an ABUKE can sealing machine.</p>
         </div>
         <div class="model-grid">
-          <article class="card model-card">
-            <span class="badge">Regular Model</span>
-            <h3>Essential automatic sealing</h3>
-            <p>For shops that need a straightforward sealing process with cup pads.</p>
-            <ul><li>Small motor</li><li>Requires cup pads</li><li>Practical daily beverage sealing</li></ul>
-          </article>
-          <article class="card model-card">
-            <span class="badge">Upgraded Model</span>
-            <h3>Stronger sealing performance</h3>
-            <p>For teams that prefer a larger motor while keeping a familiar cup pad workflow.</p>
-            <ul><li>Large motor</li><li>Stronger sealing performance</li><li>Requires cup pads</li></ul>
-          </article>
-          <article class="card model-card featured">
-            <span class="badge">Flagship Model</span>
-            <h3>Dual motor with touchscreen panel</h3>
-            <p>For counters that want automated height detection and no cup pad requirement.</p>
-            <ul><li>Dual motor</li><li>Touchscreen panel</li><li>No cup pads required</li><li>Auto height detection</li></ul>
-          </article>
+          <article class="card model-card"><span class="badge">Regular Model</span><h3>Essential automatic sealing</h3><p>For shops that need a straightforward sealing process with cup pads.</p><ul><li>Small motor</li><li>Requires cup pads</li><li>Practical daily beverage sealing</li></ul></article>
+          <article class="card model-card"><span class="badge">Upgraded Model</span><h3>Stronger sealing performance</h3><p>For teams that prefer a larger motor while keeping a familiar cup pad workflow.</p><ul><li>Large motor</li><li>Stronger sealing performance</li><li>Requires cup pads</li></ul></article>
+          <article class="card model-card featured"><span class="badge">Flagship Model</span><h3>Dual motor with touchscreen panel</h3><p>For counters that want automated height detection and no cup pad requirement.</p><ul><li>Dual motor</li><li>Touchscreen panel</li><li>No cup pads required</li><li>Auto height detection</li></ul></article>
         </div>
       </div>
     </section>
 
     <section class="section" id="applications" aria-labelledby="applications-title">
       <div class="container applications-layout">
-        <div class="dark-panel">
-          <p class="eyebrow">Applications</p>
-          <h2 id="applications-title">Made for modern beverage retail.</h2>
-          <p>Use ABUKE to add can-style drink packaging to commercial menus across stationary stores and mobile beverage concepts.</p>
-        </div>
+        <div class="dark-panel"><p class="eyebrow">Applications</p><h2 id="applications-title">Made for modern beverage retail.</h2><p>Use ABUKE to add can-style drink packaging to commercial menus across stationary stores and mobile beverage concepts.</p></div>
         <div class="app-grid" aria-label="Suitable applications">
           <article class="card app-card"><span>01</span><h3>Bubble tea shops</h3><p>Package milk tea, fruit tea, and specialty drinks for takeaway service.</p></article>
           <article class="card app-card"><span>02</span><h3>Coffee shops</h3><p>Seal cold brew, iced lattes, and seasonal beverages in can-style cups.</p></article>
@@ -409,11 +405,7 @@
 
     <section class="section" id="specs" aria-labelledby="specs-title">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Product parameters</p>
-          <h2 id="specs-title">Key specifications for planning your setup.</h2>
-          <p class="section-copy">Confirm power, footprint, weight, opening size, and cup height compatibility before ordering.</p>
-        </div>
+        <div class="section-head"><p class="eyebrow">Product parameters</p><h2 id="specs-title">Key specifications for planning your setup.</h2><p class="section-copy">Confirm power, footprint, weight, opening size, and cup height compatibility before ordering.</p></div>
         <div class="spec-panel">
           <dl class="spec-grid">
             <div class="spec-card"><dt>Voltage</dt><dd>110V</dd></div>
@@ -429,40 +421,25 @@
 
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container faq-wrap">
-        <div class="section-head center">
-          <p class="eyebrow">FAQ</p>
-          <h2 id="faq-title">Questions before ordering.</h2>
-          <p class="section-copy">Review cup compatibility, cup pad requirements, and commercial-use fit.</p>
-        </div>
+        <div class="section-head center"><p class="eyebrow">FAQ</p><h2 id="faq-title">Questions before ordering.</h2><p class="section-copy">Review cup compatibility, cup pad requirements, and commercial-use fit.</p></div>
         <div class="faq-list">
-          <article class="card faq-item open"><button class="faq-trigger" type="button" aria-expanded="true"><span>What cups does it work with?</span><i aria-hidden="true">+</i></button><div class="faq-panel"><p>ABUKE can sealers are designed for can-style cups with a 55 mm / 2.17 in compatible opening and cup height under 21 cm / 8.27 in.</p></div></article>
-          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false"><span>Does it require cup pads?</span><i aria-hidden="true">+</i></button><div class="faq-panel"><p>The Regular Model and Upgraded Model require cup pads. The Flagship Model does not require cup pads and includes auto height detection.</p></div></article>
-          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false"><span>Can it seal PET can cups?</span><i aria-hidden="true">+</i></button><div class="faq-panel"><p>Yes. It can be used with PET can cups and aluminum cans that match the listed opening and height specifications.</p></div></article>
-          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false"><span>Is it suitable for commercial use?</span><i aria-hidden="true">+</i></button><div class="faq-panel"><p>Yes. ABUKE automatic can sealing machines are designed for commercial beverage environments including cafes, bubble tea shops, juice bars, dessert shops, food trucks, and beverage stores.</p></div></article>
+          <article class="card faq-item open"><button class="faq-trigger" type="button" aria-expanded="true" aria-controls="faq-a1"><span>What cups does it work with?</span><i aria-hidden="true">+</i></button><div class="faq-panel" id="faq-a1"><p>ABUKE can sealers are designed for can-style cups with a 55 mm / 2.17 in compatible opening and cup height under 21 cm / 8.27 in.</p></div></article>
+          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-a2"><span>Does it require cup pads?</span><i aria-hidden="true">+</i></button><div class="faq-panel" id="faq-a2"><p>The Regular Model and Upgraded Model require cup pads. The Flagship Model does not require cup pads and includes auto height detection.</p></div></article>
+          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-a3"><span>Can it seal PET can cups?</span><i aria-hidden="true">+</i></button><div class="faq-panel" id="faq-a3"><p>Yes. It can be used with PET can cups and aluminum cans that match the listed opening and height specifications.</p></div></article>
+          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-a4"><span>Is it suitable for commercial use?</span><i aria-hidden="true">+</i></button><div class="faq-panel" id="faq-a4"><p>Yes. ABUKE automatic can sealing machines are designed for commercial beverage environments including cafes, bubble tea shops, juice bars, dessert shops, food trucks, and beverage stores.</p></div></article>
         </div>
       </div>
     </section>
 
     <section class="section cta-section" id="contact" aria-labelledby="contact-title">
       <div class="container">
-        <div class="cta-card">
-          <p class="eyebrow">Contact ABUKE</p>
-          <h2 id="contact-title">Ready to add automatic can sealing to your beverage line?</h2>
-          <p>Share your cup material, opening size, daily sealing volume, and preferred model so compatibility can be checked before purchase.</p>
-          <div class="actions">
-            <a class="button primary" href="mailto:info@abuke.com?subject=ABUKE%20Automatic%20Can%20Sealer%20Inquiry">Contact Us</a>
-            <a class="button secondary" href="#models">Compare Models</a>
-          </div>
-        </div>
+        <div class="cta-card"><p class="eyebrow">Contact ABUKE</p><h2 id="contact-title">Ready to add automatic can sealing to your beverage line?</h2><p>Share your cup material, opening size, daily sealing volume, and preferred model so compatibility can be checked before purchase.</p><div class="actions"><a class="button primary" href="mailto:info@abuke.com?subject=ABUKE%20Automatic%20Can%20Sealer%20Inquiry">Contact Us</a><a class="button secondary" href="#models">Compare Models</a></div></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> ABUKE. Commercial Can Sealer Machine.</p>
-      <p>Automatic Can Sealing Machine for PET cans and aluminum cans.</p>
-    </div>
+    <div class="container footer-inner"><p>© <span id="year"></span> ABUKE. Commercial Can Sealer Machine.</p><p>Automatic Can Sealing Machine for PET cans and aluminum cans.</p></div>
   </footer>
 
   <script>
