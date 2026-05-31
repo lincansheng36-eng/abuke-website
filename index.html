@@ -135,6 +135,7 @@
       font-weight: 850;
       letter-spacing: 0.16em;
     }
+    .abuke-logo { width: 136px; height: 42px; display: block; }
     .logo-mark {
       width: 39px;
       height: 39px;
@@ -275,15 +276,69 @@
     .footer-inner { display: flex; justify-content: space-between; gap: 18px; padding-top: 26px; border-top: 1px solid var(--line); font-size: .94rem; }
     .footer-inner p { margin: 0; }
 
+
+    .hero-product-photo {
+      position: absolute;
+      inset: 34px 34px 116px;
+      width: calc(100% - 68px);
+      height: calc(100% - 150px);
+      object-fit: contain;
+      filter: drop-shadow(0 28px 42px rgba(16,24,40,.18));
+    }
+    .image-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .image-card { padding: 18px; overflow: hidden; }
+    .image-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; display: block; border-radius: 20px; background: #fff; }
+    .image-card h3 { margin-top: 18px; }
+    .image-card p { color: var(--muted); margin-bottom: 0; }
+    .contact-layout { display: grid; grid-template-columns: .92fr 1.08fr; gap: 22px; align-items: stretch; }
+    .contact-card { padding: 30px; }
+    .contact-card .whatsapp-inline { margin-top: 20px; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .form-field { display: grid; gap: 7px; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label { color: var(--text); font-size: .88rem; font-weight: 750; }
+    .form-field input, .form-field select, .form-field textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--ink);
+      background: rgba(255,255,255,.88);
+      font: inherit;
+      outline: none;
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+    .form-field textarea { min-height: 112px; resize: vertical; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: rgba(31,103,255,.55); box-shadow: 0 0 0 4px rgba(31,103,255,.10); }
+    .form-note { color: var(--muted); font-size: .9rem; margin: 14px 0 0; }
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 60;
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 18px;
+      color: #fff;
+      border-radius: 999px;
+      background: #20b65a;
+      box-shadow: 0 18px 42px rgba(32,182,90,.28);
+      font-weight: 800;
+    }
+
     @media (max-width: 980px) {
       .nav-links { position: fixed; top: 72px; right: 20px; left: 20px; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 14px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.96); box-shadow: 0 24px 64px rgba(16,24,40,.16); }
       .nav-links.open { display: flex; }
       .nav-links a { padding: 13px 14px; }
       .nav-cta { margin-top: 8px; }
       .menu-button { display: block; }
-      .hero-grid, .applications-layout { grid-template-columns: 1fr; }
+      .hero-grid, .applications-layout, .contact-layout { grid-template-columns: 1fr; }
       .machine-card { min-height: 550px; }
-      .grid-3, .model-grid, .spec-grid { grid-template-columns: repeat(2, 1fr); }
+      .grid-3, .model-grid, .spec-grid, .image-strip { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 680px) {
@@ -302,7 +357,9 @@
       .machine-stage { height: 105px; }
       .can-cup { width: 96px; height: 144px; }
       .hero-specs { right: 18px; left: 18px; grid-template-columns: 1fr; }
-      .grid-3, .model-grid, .app-grid, .spec-grid { grid-template-columns: 1fr; }
+      .grid-3, .model-grid, .app-grid, .spec-grid, .image-strip, .form-grid { grid-template-columns: 1fr; }
+      .form-field.full { grid-column: auto; }
+      .whatsapp-float { right: 14px; bottom: 14px; left: 14px; }
       .spec-panel { padding: 18px; border-radius: 28px; }
     }
   </style>
@@ -313,14 +370,19 @@
   <header class="site-header" id="siteHeader">
     <nav class="nav" aria-label="Primary navigation">
       <a class="logo" href="#top" aria-label="ABUKE homepage">
-        <span class="logo-mark">A</span>
-        <span>ABUKE</span>
+        <svg class="abuke-logo" viewBox="0 0 168 52" role="img" aria-label="ABUKE logo" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="logoSteel" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#101318"/><stop offset="0.55" stop-color="#4f5966"/><stop offset="1" stop-color="#d8dee5"/></linearGradient></defs>
+          <rect x="2" y="6" width="40" height="40" rx="13" fill="url(#logoSteel)"/>
+          <path d="M22 15l11 22h-6l-2-4h-8l-2 4h-6l11-22h2zm-3 13h5l-2.5-5.5L19 28z" fill="#fff"/>
+          <text x="52" y="35" fill="#101318" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="850" letter-spacing="4">ABUKE</text>
+        </svg>
       </a>
       <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
       <div class="nav-links" id="navLinks">
         <a href="#features">Features</a>
         <a href="#models">Models</a>
         <a href="#applications">Applications</a>
+        <a href="#gallery">Photos</a>
         <a href="#specs">Specifications</a>
         <a href="#faq">FAQ</a>
         <a class="nav-cta" href="#contact">Contact Us</a>
@@ -341,12 +403,8 @@
           </div>
         </div>
 
-        <div class="machine-card" aria-label="Stylized ABUKE automatic can sealer machine illustration">
-          <div class="machine-visual" aria-hidden="true">
-            <div class="machine-head"><div class="touchscreen"></div></div>
-            <div class="machine-body"></div>
-            <div class="machine-stage"><div class="can-cup"></div></div>
-          </div>
+        <div class="machine-card" aria-label="ABUKE automatic can sealer machine product photo">
+          <img class="hero-product-photo" src="https://m.media-amazon.com/images/I/51KBVv%2BJaML._US500_.jpg" alt="ABUKE automatic can sealer machine sealing a beverage can" />
           <div class="hero-specs" aria-label="Key specifications">
             <div class="hero-spec"><strong>110V</strong><span>US-ready voltage</span></div>
             <div class="hero-spec"><strong>140W</strong><span>Commercial workflow</span></div>
@@ -403,6 +461,21 @@
       </div>
     </section>
 
+    <section class="section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Product images</p>
+          <h2 id="gallery-title">Real machine photos and product views.</h2>
+          <p class="section-copy">Show customers the ABUKE machine, touchscreen interface, and compatible can-style packaging before they send an inquiry.</p>
+        </div>
+        <div class="image-strip">
+          <article class="card image-card"><img src="https://m.media-amazon.com/images/I/51KBVv%2BJaML._US500_.jpg" alt="ABUKE commercial automatic can sealer machine front view" /><h3>Machine front view</h3><p>Commercial can sealer body with beverage can positioned on the sealing stage.</p></article>
+          <article class="card image-card"><img src="https://m.media-amazon.com/images/I/61wcemmRqmL._US500_.jpg" alt="ABUKE automatic can sealer touchscreen and sealing head close-up" /><h3>Touchscreen and sealing head</h3><p>Close-up view of the touchscreen panel, emergency stop area, and sealing mechanism.</p></article>
+          <article class="card image-card"><img src="https://m.media-amazon.com/images/I/71jyY8JXsnL._US500_.jpg" alt="Compatible PET can cup sizes for ABUKE can sealer" /><h3>Compatible can cups</h3><p>Reference image for multiple can-style cup shapes and sizes used in beverage service.</p></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="specs" aria-labelledby="specs-title">
       <div class="container">
         <div class="section-head"><p class="eyebrow">Product parameters</p><h2 id="specs-title">Key specifications for planning your setup.</h2><p class="section-copy">Confirm power, footprint, weight, opening size, and cup height compatibility before ordering.</p></div>
@@ -432,11 +505,38 @@
     </section>
 
     <section class="section cta-section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="cta-card"><p class="eyebrow">Contact ABUKE</p><h2 id="contact-title">Ready to add automatic can sealing to your beverage line?</h2><p>Share your cup material, opening size, daily sealing volume, and preferred model so compatibility can be checked before purchase.</p><div class="actions"><a class="button primary" href="mailto:info@abuke.com?subject=ABUKE%20Automatic%20Can%20Sealer%20Inquiry">Contact Us</a><a class="button secondary" href="#models">Compare Models</a></div></div>
+      <div class="container contact-layout">
+        <div class="cta-card">
+          <p class="eyebrow">Contact ABUKE</p>
+          <h2 id="contact-title">Ready to add automatic can sealing to your beverage line?</h2>
+          <p>Send your cup material, opening size, daily sealing volume, and preferred model so compatibility can be checked before purchase.</p>
+          <div class="actions">
+            <a class="button primary" href="mailto:info@abuke.com?subject=ABUKE%20Automatic%20Can%20Sealer%20Inquiry">Email ABUKE</a>
+            <a class="button secondary whatsapp-inline" href="https://wa.me/15551234567?text=Hello%20ABUKE%2C%20I%20want%20to%20inquire%20about%20the%20Automatic%20Can%20Sealer%20Machine." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <p class="form-note">Replace the WhatsApp number and email address with your official sales contacts before publishing.</p>
+        </div>
+
+        <form class="card contact-card" action="mailto:info@abuke.com" method="post" enctype="text/plain">
+          <p class="eyebrow">Contact form</p>
+          <h3>Inquiry form: request model and compatibility support</h3>
+          <div class="form-grid">
+            <div class="form-field"><label for="name">Name</label><input id="name" name="Name" autocomplete="name" required /></div>
+            <div class="form-field"><label for="email">Email</label><input id="email" name="Email" type="email" autocomplete="email" required /></div>
+            <div class="form-field"><label for="company">Company</label><input id="company" name="Company" autocomplete="organization" /></div>
+            <div class="form-field"><label for="country">Country</label><input id="country" name="Country" autocomplete="country-name" /></div>
+            <div class="form-field"><label for="model">Preferred model</label><select id="model" name="Preferred model"><option>Flagship Model</option><option>Upgraded Model</option><option>Regular Model</option><option>Not sure yet</option></select></div>
+            <div class="form-field"><label for="quantity">Estimated quantity</label><input id="quantity" name="Estimated quantity" type="number" min="1" placeholder="1" /></div>
+            <div class="form-field full"><label for="message">Inquiry details</label><textarea id="message" name="Inquiry details" placeholder="Tell us your cup material, can opening, max cup height, and daily sealing volume."></textarea></div>
+          </div>
+          <button class="button primary" type="submit">Send Inquiry</button>
+          <p class="form-note">This static form opens the visitor’s email app. Connect it to your CRM or form endpoint when available.</p>
+        </form>
       </div>
     </section>
   </main>
+
+  <a class="whatsapp-float" href="https://wa.me/15551234567?text=Hello%20ABUKE%2C%20I%20want%20to%20inquire%20about%20the%20Automatic%20Can%20Sealer%20Machine." target="_blank" rel="noopener" aria-label="Contact ABUKE on WhatsApp">WhatsApp</a>
 
   <footer>
     <div class="container footer-inner"><p>© <span id="year"></span> ABUKE. Commercial Can Sealer Machine.</p><p>Automatic Can Sealing Machine for PET cans and aluminum cans.</p></div>
