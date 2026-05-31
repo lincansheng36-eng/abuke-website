@@ -232,8 +232,9 @@
     .number-icon { width: 43px; height: 43px; display: grid; place-items: center; margin-bottom: 27px; color: #ffffff; border-radius: 14px; background: linear-gradient(145deg, #202832, #a6afb9); box-shadow: inset 0 1px 1px rgba(255,255,255,.32), 0 12px 24px rgba(16,24,40,.14); font-size: .85rem; font-weight: 850; }
     .feature-card p, .model-card p, .app-card p, .faq-panel p { color: var(--muted); margin-bottom: 0; }
 
-    .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .model-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .model-card { min-height: 396px; padding: 30px; position: relative; overflow: hidden; }
+    .machine-option-image { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; display: block; margin-bottom: 22px; border-radius: 22px; background: linear-gradient(145deg, #fff, #eef2f6); }
     .model-card.featured { color: #ffffff; border-color: rgba(255,255,255,.18); background: radial-gradient(circle at 28% 0%, rgba(255,255,255,.24), transparent 38%), linear-gradient(145deg, #101318, #3b4553 56%, #929ca8 140%); box-shadow: 0 34px 82px rgba(16,24,40,.24); }
     .model-card.featured p, .model-card.featured li { color: rgba(255,255,255,.76); }
     .badge { display: inline-flex; margin-bottom: 20px; padding: 7px 12px; border-radius: 999px; background: rgba(31,103,255,.1); color: var(--blue-dark); font-size: .75rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
@@ -404,7 +405,7 @@
         </div>
 
         <div class="machine-card" aria-label="ABUKE automatic can sealer machine product photo">
-          <img class="hero-product-photo" src="https://m.media-amazon.com/images/I/51KBVv%2BJaML._US500_.jpg" alt="ABUKE automatic can sealer machine sealing a beverage can" />
+          <img class="hero-product-photo" src="touchscreen-can-sealer.jpg" alt="ABUKE touchscreen can sealer machine" />
           <div class="hero-specs" aria-label="Key specifications">
             <div class="hero-spec"><strong>110V</strong><span>US-ready voltage</span></div>
             <div class="hero-spec"><strong>140W</strong><span>Commercial workflow</span></div>
@@ -423,11 +424,11 @@
         </div>
         <div class="grid-3">
           <article class="card feature-card"><div class="number-icon">01</div><h3>Automatic one-touch operation</h3><p>Start the sealing cycle with a simple operating flow for busy service counters.</p></article>
-          <article class="card feature-card"><div class="number-icon">02</div><h3>No cup pad required for flagship model</h3><p>The flagship configuration reduces cup pad handling for faster mixed-cup workflows.</p></article>
-          <article class="card feature-card"><div class="number-icon">03</div><h3>Automatically adapts to cup height</h3><p>Auto height detection on the flagship model helps simplify setup between compatible cup sizes.</p></article>
+          <article class="card feature-card"><div class="number-icon">02</div><h3>Touchscreen model requires no cup pads</h3><p>The touchscreen can sealer is designed to work without cup pads for more efficient operation.</p></article>
+          <article class="card feature-card"><div class="number-icon">03</div><h3>Touchscreen model auto-detects cup height</h3><p>The touchscreen model automatically recognizes compatible cup height for a more stable commercial workflow.</p></article>
           <article class="card feature-card"><div class="number-icon">04</div><h3>Compatible with 55mm can openings</h3><p>Designed for PET can cups and aluminum cans with a 55 mm / 2.17 in opening.</p></article>
           <article class="card feature-card"><div class="number-icon">05</div><h3>Suitable for cups under 21cm height</h3><p>Supports can-style cups up to 21 cm / 8.27 in for common beverage packaging needs.</p></article>
-          <article class="card feature-card"><div class="number-icon">06</div><h3>Stable sealing, less leakage risk</h3><p>A commercial sealing structure helps reduce avoidable spills during service and delivery.</p></article>
+          <article class="card feature-card"><div class="number-icon">06</div><h3>Button model uses dedicated cup pads</h3><p>The button can sealer requires cup pads, and different cup types need matching cup pads.</p></article>
         </div>
       </div>
     </section>
@@ -435,14 +436,25 @@
     <section class="section" id="models" aria-labelledby="models-title">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Three model options</p>
-          <h2 id="models-title">Choose the machine that matches your counter.</h2>
-          <p class="section-copy">Compare motor configuration, cup pad requirements, and interface options before selecting an ABUKE can sealing machine.</p>
+          <p class="eyebrow">Can Sealer Machines</p>
+          <h2 id="models-title">Choose between the button model and touchscreen model.</h2>
+          <p class="section-copy">These two ABUKE machines use different operation panels and cup workflows. Please keep their features separate when comparing them.</p>
         </div>
         <div class="model-grid">
-          <article class="card model-card"><span class="badge">Regular Model</span><h3>Essential automatic sealing</h3><p>For shops that need a straightforward sealing process with cup pads.</p><ul><li>Small motor</li><li>Requires cup pads</li><li>Practical daily beverage sealing</li></ul></article>
-          <article class="card model-card"><span class="badge">Upgraded Model</span><h3>Stronger sealing performance</h3><p>For teams that prefer a larger motor while keeping a familiar cup pad workflow.</p><ul><li>Large motor</li><li>Stronger sealing performance</li><li>Requires cup pads</li></ul></article>
-          <article class="card model-card featured"><span class="badge">Flagship Model</span><h3>Dual motor with touchscreen panel</h3><p>For counters that want automated height detection and no cup pad requirement.</p><ul><li>Dual motor</li><li>Touchscreen panel</li><li>No cup pads required</li><li>Auto height detection</li></ul></article>
+          <article class="card model-card">
+            <img class="machine-option-image" src="button-can-sealer.jpg" alt="ABUKE button can sealer machine" />
+            <span class="badge">Button Can Sealer</span>
+            <h3>Button model can sealer</h3>
+            <p>A basic commercial choice with a button operation panel and cup-pad workflow.</p>
+            <ul><li>Button operation panel</li><li>Requires cup pads</li><li>Different cup types need matching cup pads</li><li>Suitable for basic commercial use</li></ul>
+          </article>
+          <article class="card model-card featured">
+            <img class="machine-option-image" src="touchscreen-can-sealer.jpg" alt="ABUKE touchscreen can sealer machine" />
+            <span class="badge">Touchscreen Can Sealer</span>
+            <h3>Touchscreen model can sealer</h3>
+            <p>A more efficient commercial option with touchscreen control, no cup pads, and auto height detection.</p>
+            <ul><li>Touchscreen operation panel</li><li>No cup pads required</li><li>Automatically detects cup height</li><li>Suitable for more efficient and stable commercial use</li></ul>
+          </article>
         </div>
       </div>
     </section>
@@ -465,13 +477,12 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Product images</p>
-          <h2 id="gallery-title">Real machine photos and product views.</h2>
-          <p class="section-copy">Show customers the ABUKE machine, touchscreen interface, and compatible can-style packaging before they send an inquiry.</p>
+          <h2 id="gallery-title">Real photos of the two ABUKE can sealer machines.</h2>
+          <p class="section-copy">Use the exact photos below for the two product options: the button model and the touchscreen model.</p>
         </div>
         <div class="image-strip">
-          <article class="card image-card"><img src="https://m.media-amazon.com/images/I/51KBVv%2BJaML._US500_.jpg" alt="ABUKE commercial automatic can sealer machine front view" /><h3>Machine front view</h3><p>Commercial can sealer body with beverage can positioned on the sealing stage.</p></article>
-          <article class="card image-card"><img src="https://m.media-amazon.com/images/I/61wcemmRqmL._US500_.jpg" alt="ABUKE automatic can sealer touchscreen and sealing head close-up" /><h3>Touchscreen and sealing head</h3><p>Close-up view of the touchscreen panel, emergency stop area, and sealing mechanism.</p></article>
-          <article class="card image-card"><img src="https://m.media-amazon.com/images/I/71jyY8JXsnL._US500_.jpg" alt="Compatible PET can cup sizes for ABUKE can sealer" /><h3>Compatible can cups</h3><p>Reference image for multiple can-style cup shapes and sizes used in beverage service.</p></article>
+          <article class="card image-card"><img src="button-can-sealer.jpg" alt="ABUKE button can sealer machine" /><h3>Button can sealer</h3><p>Button operation panel, requires cup pads, and different cup types need different cup pads.</p></article>
+          <article class="card image-card"><img src="touchscreen-can-sealer.jpg" alt="ABUKE touchscreen can sealer machine" /><h3>Touchscreen can sealer</h3><p>Touchscreen operation panel, no cup pads required, and automatic cup height detection.</p></article>
         </div>
       </div>
     </section>
@@ -497,7 +508,7 @@
         <div class="section-head center"><p class="eyebrow">FAQ</p><h2 id="faq-title">Questions before ordering.</h2><p class="section-copy">Review cup compatibility, cup pad requirements, and commercial-use fit.</p></div>
         <div class="faq-list">
           <article class="card faq-item open"><button class="faq-trigger" type="button" aria-expanded="true" aria-controls="faq-a1"><span>What cups does it work with?</span><i aria-hidden="true">+</i></button><div class="faq-panel" id="faq-a1"><p>ABUKE can sealers are designed for can-style cups with a 55 mm / 2.17 in compatible opening and cup height under 21 cm / 8.27 in.</p></div></article>
-          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-a2"><span>Does it require cup pads?</span><i aria-hidden="true">+</i></button><div class="faq-panel" id="faq-a2"><p>The Regular Model and Upgraded Model require cup pads. The Flagship Model does not require cup pads and includes auto height detection.</p></div></article>
+          <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-a2"><span>Does it require cup pads?</span><i aria-hidden="true">+</i></button><div class="faq-panel" id="faq-a2"><p>The button can sealer requires cup pads, and different cup types need matching cup pads. The touchscreen can sealer does not require cup pads and automatically detects cup height.</p></div></article>
           <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-a3"><span>Can it seal PET can cups?</span><i aria-hidden="true">+</i></button><div class="faq-panel" id="faq-a3"><p>Yes. It can be used with PET can cups and aluminum cans that match the listed opening and height specifications.</p></div></article>
           <article class="card faq-item"><button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-a4"><span>Is it suitable for commercial use?</span><i aria-hidden="true">+</i></button><div class="faq-panel" id="faq-a4"><p>Yes. ABUKE automatic can sealing machines are designed for commercial beverage environments including cafes, bubble tea shops, juice bars, dessert shops, food trucks, and beverage stores.</p></div></article>
         </div>
@@ -525,7 +536,7 @@
             <div class="form-field"><label for="email">Email</label><input id="email" name="Email" type="email" autocomplete="email" required /></div>
             <div class="form-field"><label for="company">Company</label><input id="company" name="Company" autocomplete="organization" /></div>
             <div class="form-field"><label for="country">Country</label><input id="country" name="Country" autocomplete="country-name" /></div>
-            <div class="form-field"><label for="model">Preferred model</label><select id="model" name="Preferred model"><option>Flagship Model</option><option>Upgraded Model</option><option>Regular Model</option><option>Not sure yet</option></select></div>
+            <div class="form-field"><label for="model">Preferred model</label><select id="model" name="Preferred model"><option>Touchscreen can sealer</option><option>Button can sealer</option><option>Not sure yet</option></select></div>
             <div class="form-field"><label for="quantity">Estimated quantity</label><input id="quantity" name="Estimated quantity" type="number" min="1" placeholder="1" /></div>
             <div class="form-field full"><label for="message">Inquiry details</label><textarea id="message" name="Inquiry details" placeholder="Tell us your cup material, can opening, max cup height, and daily sealing volume."></textarea></div>
           </div>
